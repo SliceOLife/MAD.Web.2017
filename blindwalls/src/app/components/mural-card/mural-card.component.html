@@ -1,0 +1,12 @@
+<md-card class="mural-card">
+    <md-card-header>
+      <md-card-title><ng-content select=".mural-card-title"></ng-content></md-card-title>
+      <md-card-subtitle>{{ location }}</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src="{{ imageUri }}" alt="Preview image of mural">
+    <md-chip-list><md-chip color="primary" selected="true" disabled="true">Chip data?</md-chip></md-chip-list>
+    <md-card-actions>
+      <button md-button>FAV</button>
+      <button md-button>DETAILS</button>
+    </md-card-actions>
+</md-card>
