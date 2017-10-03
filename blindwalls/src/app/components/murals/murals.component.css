@@ -1,0 +1,13 @@
+.murals {
+    margin: 20px 10px 0px 10px;
+}
+
+.md-card-image {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.mural-card {
+    width: 375px;
+    margin-bottom: 10px;
+}

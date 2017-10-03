@@ -1,4 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-evenly center">
+<div class="container mat-app-background">
+  <md-toolbar color="primary">
+    <span>BlindWalls Web</span>
+    <span class="toolbar-filler"></span>
+    <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon></button>
+  </md-toolbar>
+
+  <md-menu #appMenu="mdMenu">
+    <button md-menu-item>Help</button>
+  </md-menu>
   <app-murals></app-murals>
 </div>

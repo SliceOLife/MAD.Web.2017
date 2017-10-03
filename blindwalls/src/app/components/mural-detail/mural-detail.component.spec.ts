@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MuralCardComponent } from './mural-card.component';
+import { MuralDetailComponent } from './mural-detail.component';
 
-describe('ArtCardComponent', () => {
-  let component: MuralCardComponent;
-  let fixture: ComponentFixture<MuralCardComponent>;
+describe('MuralDetailComponent', () => {
+  let component: MuralDetailComponent;
+  let fixture: ComponentFixture<MuralDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MuralCardComponent ]
+      declarations: [ MuralDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MuralCardComponent);
+    fixture = TestBed.createComponent(MuralDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

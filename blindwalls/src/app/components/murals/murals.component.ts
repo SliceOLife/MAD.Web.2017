@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Mural }             from '../../models/mural'
-import { MuralService }      from '../../services/mural.service'
+import { Mural } from '../../models/mural';
+import { MuralService } from '../../services/mural.service';
 
 @Component({
   selector: 'app-murals',
@@ -9,26 +9,19 @@ import { MuralService }      from '../../services/mural.service'
   styleUrls: ['./murals.component.css']
 })
 export class MuralsComponent implements OnInit {
-  murals: Mural[];
+  _murals: Mural[];
 
   constructor(private muralService: MuralService) { }
 
-  transformMurals(data: any[]): void {
-    console.log(data);
-  }
-
   getMurals(): void {
-    this.muralService
-        .getMurals()
-        .then(murals => this.transformMurals(murals));
+    this.muralService.getMurals()
+      .subscribe(
+        resultArray => this._murals = resultArray,
+        error => console.error('Error :: ' + error)
+      );
   }
 
-  getMuralsNew(): void {
-    console.log(this.muralService.getMuralsNew());
+  ngOnInit(): void {
+    this.getMurals();
   }
-
-  ngOnInit() {
-    this.getMu();
-  }
-
 }

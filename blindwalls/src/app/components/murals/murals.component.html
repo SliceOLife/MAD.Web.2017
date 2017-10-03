@@ -1,3 +1,18 @@
-<p>
-  murals works!
-</p>
+<div class="murals" fxLayout=" row " fxLayoutWrap fxLayoutAlign="space-between center">
+  <div class="mural-container " *ngFor="let mural of _murals ">
+    <md-card class="mural-card">
+      <md-card-header>
+        <md-card-title>
+          {{ mural.title.nl }}
+        </md-card-title>
+        <md-card-subtitle>{{ mural.address }}</md-card-subtitle>
+      </md-card-header>
+      <img class="md-card-image" src="https://unsplash.it/400/400" alt="Preview image of mural">
+      <!--<md-chip-list><md-chip color="primary" selected="true" disabled="true">Chip data?</md-chip></md-chip-list>!-->
+      <md-card-actions>
+        <!--<button md-button>FAV</button>!-->
+        <button md-button>DETAILS</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>
