@@ -54,4 +54,5 @@ export interface Mural {
     material: Material;
     category: Category;
     images: Image[];
+    frontPageImage: Image;
 }

@@ -16,9 +16,22 @@ export class MuralsComponent implements OnInit {
   getMurals(): void {
     this.muralService.getMurals()
       .subscribe(
-        resultArray => this._murals = resultArray,
+        resultArray => this.handleMuralData(resultArray),
         error => console.error('Error :: ' + error)
       );
+  }
+
+  handleMuralData(data): void {
+    this._murals = data;
+    this.setFrontPageImage();
+  }
+
+  setFrontPageImage(): void {
+    if (this._murals.length > 0) {
+      this._murals.forEach(element => {
+        element.frontPageImage = element.images.find(imgElem => imgElem.type === 'frontpage');
+      });
+    }
   }
 
   ngOnInit(): void {

@@ -3,8 +3,8 @@
 }
 
 .md-card-image {
-    max-width: 50%;
-    max-height: 50%;
+    width: 200px;
+    height: 200px;
 }
 
 .mural-card {
