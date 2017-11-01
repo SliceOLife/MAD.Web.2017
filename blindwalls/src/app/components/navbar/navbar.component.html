@@ -1,0 +1,28 @@
+<md-toolbar color="primary">
+  <span class="toolbar-title" routerLink="/">BlindWalls Web</span>
+  <span class="toolbar-filler"></span>
+  <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon></button>
+</md-toolbar>
+
+<md-menu #appMenu="mdMenu">
+  <a md-menu-item routerLink="/">
+    <md-icon>home</md-icon>
+    <span>Home</span>
+  </a>
+  <a md-menu-item href="https://twitter.com/gdfb">
+    <md-icon svgIcon="twitter"></md-icon>
+    <span>Twitter</span>
+  </a>
+  <a md-menu-item href="https://www.facebook.com/BlindWalls">
+    <md-icon svgIcon="facebook"></md-icon>
+    <span>Facebook</span>
+  </a>
+  <a md-menu-item href="https://www.instagram.com/blindwallsgallery/">
+    <md-icon svgIcon="instagram"></md-icon>
+    <span>Instagram</span>
+  </a>
+  <a md-menu-item href="https://vimeo.com/channels/bwg076">
+    <md-icon svgIcon="vimeo"></md-icon>
+    <span>Vimeo</span>
+  </a>
+</md-menu>

@@ -7,11 +7,11 @@
         </md-card-title>
         <md-card-subtitle>{{ mural.address }}</md-card-subtitle>
       </md-card-header>
-      <img class="md-card-image" src="https://api.blindwalls.gallery/{{ mural.frontPageImage.url }}" alt="Preview image of mural">
+      <img class="md-card-image" src="https://api.blindwalls.gallery/{{ mural.frontPageImage.url }}" alt="{{ mural.title.nl }}">
       <!--<md-chip-list><md-chip color="primary" selected="true" disabled="true">Chip data?</md-chip></md-chip-list>!-->
       <md-card-actions>
         <!--<button md-button>FAV</button>!-->
-        <button md-button>DETAILS</button>
+        <button md-button (click)="gotoDetail(mural.id)">DETAILS</button>
       </md-card-actions>
     </md-card>
   </div>

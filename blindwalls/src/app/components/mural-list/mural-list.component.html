@@ -1,0 +1,13 @@
+<md-nav-list class="mural-list">
+    <md-list-item *ngFor="let mural of _murals" (click)="onSelect(mural)">
+       <a mdLine href="...">{{ link }}</a>
+       <h4 class="mural-title" md-line>{{mural.title.nl}}</h4>
+       <p md-line> {{mural.address}}</p>
+       <p md-line> {{mural.photographer}}</p>
+       <button md-icon-button (click)="showInfo(link)">
+          <md-icon>forward</md-icon>
+       </button>
+    </md-list-item>
+</md-nav-list>
+
+<app-mural-detail [mural]="selectedMural"></app-mural-detail>

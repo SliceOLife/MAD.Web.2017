@@ -1,13 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container mat-app-background">
-  <md-toolbar color="primary">
-    <span>BlindWalls Web</span>
-    <span class="toolbar-filler"></span>
-    <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon></button>
-  </md-toolbar>
-
-  <md-menu #appMenu="mdMenu">
-    <button md-menu-item>Help</button>
-  </md-menu>
-  <app-murals></app-murals>
+<div class="app-container mat-app-background">
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>

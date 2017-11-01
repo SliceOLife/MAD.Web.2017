@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Mural } from '../../models/mural';
 import { MuralService } from '../../services/mural.service';
@@ -11,7 +12,7 @@ import { MuralService } from '../../services/mural.service';
 export class MuralsComponent implements OnInit {
   _murals: Mural[];
 
-  constructor(private muralService: MuralService) { }
+  constructor(private muralService: MuralService, private router: Router) { }
 
   getMurals(): void {
     this.muralService.getMurals()
@@ -24,6 +25,10 @@ export class MuralsComponent implements OnInit {
   handleMuralData(data): void {
     this._murals = data;
     this.setFrontPageImage();
+  }
+
+  gotoDetail(id): void {
+    this.router.navigate(['/mural', id]);
   }
 
   setFrontPageImage(): void {
